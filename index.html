@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxivn</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://codingyaar.com/wp-content/uploads/logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #123524;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="https://codingyaar.com/wp-content/uploads/logo.png" alt="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="btn btn-primary" href="#">Đăng xe <i class='bx bxs-car' ></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;">Tìm xe <i class='bx bx-search-alt-2' ></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" style="color: white;">Đăng ký <i class='bx bx-user' ></i></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link position-relative" href="#" style="color: white;">
+                    Yêu thích <i class='bx bx-heart' ></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+
+    <!-- Header -->
+
+
+    <header style="background-color: #85A947">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <a class="navbar-brand" href="#"><img src="https://codingyaar.com/wp-content/uploads/logo.png" alt="logo"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#secondnav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="secondnav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Giới Thiệu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Xe của tôi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cài đặt</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Ủng hộ</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+
+          <div class="container pb-3">
+            <h2 class="text-center mb-5 fw-bold" style="color: #123524;">XE GHÉP HÒA BÌNH - HÀ NỘI - NỘI BÀI</h2>
+
+            <div class="findcar">
+                <form action="" method="post" class="text-center">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="diemkhoihanh mb-3">
+                                <h4 class="text-center">📍Điểm khởi hành</h3>
+                                    <select class="form-select-sm mb-3 selectplace" id="city" aria-label=".form-select-sm">
+                                        <option value="" selected>Chọn tỉnh thành</option>           
+                                    </select>
+        
+                                    <select class="form-select-sm mb-3 selectplace" id="district" aria-label=".form-select-sm">
+                                        <option value="" selected>Chọn quận huyện</option>
+                                    </select>
+        
+                                    <select class="form-select-sm selectplace" id="ward" aria-label=".form-select-sm">
+                                        <option value="" selected>Chọn phường xã</option>
+                                    </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="diemden mb-3">
+                                <h4 class="text-center">📍Điểm đến</h3>
+                                    <select class="form-select-sm mb-3 selectplace" id="citya" aria-label=".form-select-sm">
+                                        <option value="" selected>Chọn tỉnh thành</option>           
+                                    </select>
+        
+                                    <select class="form-select-sm mb-3 selectplace" id="districta" aria-label=".form-select-sm">
+                                        <option value="" selected>Chọn quận huyện</option>
+                                    </select>
+        
+                                    <select class="form-select-sm selectplace" id="warda" aria-label=".form-select-sm">
+                                        <option value="" selected>Chọn phường xã</option>
+                                    </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    
+
+                    <button class="btn btn-primary fw-bold" href="#" style="font-size: 20px;">Tìm xe</button>
+
+                </form>
+
+            </div>
+          </div>
+    </header>
+
+
+    <!-- Main -->
+
+    <section class="mt-4">
+      <div class="container">
+        <h3 class="text-center">Chuyến xe phổ biến nhất</h3>
+        <div class="row mt-3">
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <a href="#">Hà Nội → Nam Định</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <a href="#">Hà Nội → Phú Thọ</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body text-center">
+                <a href="#">Hà Nội → Bắc Giang</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <a class="btn btn-primary mt-1 fw-bold" href="#">Xem thêm</a>
+      </div>
+    </section>
+
+    <section class="mt-5">
+      <div class="container">
+        <h2 class="text-center">Chuyến xe mới xuất bản</h2>
+        <div class="row mt-3">
+          <div class="col-md-3">
+            <div class="card" style="width: 100%;">
+              <div class="text-center">
+                <img src="https://vicar.vn/wp-content/uploads/2025/01/IMG_4907-scaled.jpeg" class="card-img-top car-image">
+              </div>
+              
+              <div class="card-body text-center">
+                <h5 class="card-title">Vinfast Fadil</h5>
+                <p class="card-text" style="color: red;">250.000 ₫ /chuyến</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class='bx bx-time-five' ></i> 14:00 <strong>Hà Đông</strong></li>
+                <li class="list-group-item"><i class='bx bx-time-five' ></i> 18:00 <strong>Thái Thụy</strong></li>
+                <li class="list-group-item">Thứ: <i class="thu">2</i> <i class="thu">3</i> <i class="thu">4</i> <i class="thu">5</i> <i class="thu">6</i> <i class="thu">7</i></li>
+              </ul>
+              <div class="card-body text-center">
+                <a href="#" class="card-link">Chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card" style="width: 100%;">
+              <div class="text-center">
+                <img src="https://vicar.vn/wp-content/uploads/2025/01/IMG_4907-scaled.jpeg" class="card-img-top car-image">
+              </div>
+              
+              <div class="card-body text-center">
+                <h5 class="card-title">Vinfast Fadil</h5>
+                <p class="card-text" style="color: red;">250.000 ₫ /chuyến</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class='bx bx-time-five' ></i> 14:00 <strong>Hà Đông</strong></li>
+                <li class="list-group-item"><i class='bx bx-time-five' ></i> 18:00 <strong>Thái Thụy</strong></li>
+                <li class="list-group-item">Thứ: <i class="thu">2</i> <i class="thu">3</i> <i class="thu">4</i> <i class="thu">5</i> <i class="thu">6</i> <i class="thu">7</i></li>
+              </ul>
+              <div class="card-body text-center">
+                <a href="#" class="card-link">Chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card" style="width: 100%;">
+              <div class="text-center">
+                <img src="https://vicar.vn/wp-content/uploads/2025/01/IMG_4907-scaled.jpeg" class="card-img-top car-image">
+              </div>
+              
+              <div class="card-body text-center">
+                <h5 class="card-title">Vinfast Fadil</h5>
+                <p class="card-text" style="color: red;">250.000 ₫ /chuyến</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class='bx bx-time-five' ></i> 14:00 <strong>Hà Đông</strong></li>
+                <li class="list-group-item"><i class='bx bx-time-five' ></i> 18:00 <strong>Thái Thụy</strong></li>
+                <li class="list-group-item">Thứ: <i class="thu">2</i> <i class="thu">3</i> <i class="thu">4</i> <i class="thu">5</i> <i class="thu">6</i> <i class="thu">7</i></li>
+              </ul>
+              <div class="card-body text-center">
+                <a href="#" class="card-link">Chi tiết</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card" style="width: 100%;">
+              <div class="text-center">
+                <img src="https://vicar.vn/wp-content/uploads/2025/01/IMG_4907-scaled.jpeg" class="card-img-top car-image">
+              </div>
+              
+              <div class="card-body text-center">
+                <h5 class="card-title">Vinfast Fadil</h5>
+                <p class="card-text" style="color: red;">250.000 ₫ /chuyến</p>
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><i class='bx bx-time-five' ></i> 14:00 <strong>Hà Đông</strong></li>
+                <li class="list-group-item"><i class='bx bx-time-five' ></i> 18:00 <strong>Thái Thụy</strong></li>
+                <li class="list-group-item">Thứ: <i class="thu">2</i> <i class="thu">3</i> <i class="thu">4</i> <i class="thu">5</i> <i class="thu">6</i> <i class="thu">7</i></li>
+              </ul>
+              <div class="card-body text-center">
+                <a href="#" class="card-link">Chi tiết</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+
+
+    <section class="mt-5">
+      <div class="container text-center">
+        <div class="d-flex justify-content-center">
+          <a href="#" class="btn btn-primary me-2">Danh sách tìm tài xế</a>
+          <a href="#" class="btn btn-primary">Các chuyến xe</a>
+        </div>
+
+        <h3 class="mt-3 mb-3">Bắt đầu ngay hôm nay</h3>
+
+        <a href="#" class="btn btn-primary me-2">
+          <i class='bx bxs-car' ></i> <strong class="lead fw-bold">Xuất bản một chuyến đi</strong> <br>
+          Dành cho tài xế xe ghép
+        </a>
+
+        <h3 class="mt-3 mb-3">Tải về ứng dụng</h3>
+
+        <div class="d-flex justify-content-center">
+          <a href="#" class="me-2">
+            <img width="150px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/1024px-Google_Play_Store_badge_EN.svg.png" alt="">
+          </a>
+          <a href="#">
+            <img width="150px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Download_on_the_App_Store_Badge.svg/1280px-Download_on_the_App_Store_Badge.svg.png" alt="">
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+
+    <section class="container mt-5">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+      
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <img width="60px" src="https://codingyaar.com/wp-content/uploads/logo.png" alt="">
+          </a>
+          <span class="mb-3 mb-md-0 text-muted">© 2025 Company, Inc</span>
+        </div>
+    
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+          <li class="ms-3"><i class='bx bxl-facebook-circle' style="font-size: 28px;"></i></li>
+          <li class="ms-3"><i class='bx bxl-tiktok' style="font-size: 28px;"></i></li>
+          <li class="ms-3"><i class='bx bxl-instagram-alt' style="font-size: 28px;"></i></li>
+        </ul>
+      </footer>
+    </section>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
